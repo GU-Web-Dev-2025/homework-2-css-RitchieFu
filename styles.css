@@ -1,224 +1,240 @@
 /*
- Ritchie Fu, CPSC 322, Homework 2, 9/16/2025
+ Ritchie Fu, CPSC 322, Homework 2, 9/17/2025
 */
 body {
-    font-family: American Typerwriter, 'Courier', 'Courier New', monospace;
-    background-color: #030713;
-    color: #e1f1f6;
+  font-family: American Typerwriter, "Courier", "Courier New", monospace;
+  background-color: #030713;
+  color: #e1f1f6;
 }
 
-html, body { margin: 0; padding: 0; }
-*, *::before, *::after { box-sizing: border-box; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 :root {
-    --sticky-header-offset: 80px;
+  --sticky-header-offset: 80px;
+  --pane-height-percent: 100%;
 }
 
 html {
-    scroll-padding-top: var(--sticky-header-offset);
+  scroll-padding-top: var(--sticky-header-offset);
 }
 
 hr {
-    border: none;
-    border-top: 2px solid #030713;
-    margin: 10px 0;
+  border: none;
+  border-top: 2px solid #030713;
+  margin: 10px 0;
 }
 
 #container {
-    display: grid;
-    grid-template-areas: 
-        "top top"
-        "side right";
-    grid-template-columns: 30% auto;
-    grid-template-rows: auto 1fr;      /* top adapts to its content, second row fills remaining space */
-    gap: 10px;
-    min-height: 100vh;                 /* can grow beyond viewport */
-    max-width: 1100px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "top top"
+    "side right";
+  grid-template-columns: 30% auto;
+  grid-template-rows: auto 1fr; /* top adapts to its content, second row fills remaining space */
+  gap: 10px;
+  min-height: 100vh; /* can grow beyond viewport */
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 #top-pane {
-    background-color: rgba(39,57,76,0.55); /* frosted translucency */
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    padding: 10px;
-    grid-area: top;
-    border: #49c5b1 2px solid;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 5px;
-    z-index: 100;
-    width: 100%;
-    height: 75px;
-    max-width: 1100px;
-    box-shadow: 0 6px 14px -6px rgba(0,0,0,0.75);
-    margin-inline: auto;       /* keep centered */
-    transition: width .5s ease, height .5s ease, background-color .3s ease, padding .3s ease, box-shadow .3s ease;
+  background-color: rgba(39, 57, 76, 0.55); /* frosted translucency */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 10px;
+  grid-area: top;
+  border: #49c5b1 2px solid;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 5px;
+  z-index: 100;
+  width: 100%;
+  height: 75px;
+  max-width: 1100px;
+  box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.75);
+  margin-inline: auto; /* keep centered */
+  transition: width 0.5s ease, height 0.5s ease, background-color 0.3s ease,
+    padding 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Shrink to ~50% of original width once helper JS adds .scrolled to <body> */
 body.scrolled #top-pane {
-    width: 55%;                
-    height: 80%;
-    background-color: rgba(39,57,76,0.50); /* slight tweak while shrunk */
-    padding: 10px 10px;
-    box-shadow: 0 8px 18px -8px rgba(0,0,0,0.75);
+  width: 55%;
+  height: 80%;
+  background-color: rgba(39, 57, 76, 0.5); /* slight tweak while shrunk */
+  padding: 10px 10px;
+  box-shadow: 0 8px 18px -8px rgba(0, 0, 0, 0.75);
 }
 
 /* Optional: prevent over-shrinking on narrow screens */
 @media (max-width: 700px) {
-    body.scrolled #top-pane {
-        width: 70%;
-        height: 50px;
-    }
+  body.scrolled #top-pane {
+    width: 70%;
+    height: 50px;
+  }
 }
 
 #logo {
-    height: 50px; 
-    /* Todo change size later */
+  height: 50px;
 }
 
 #logo-flipped {
-    height: 50px; 
-    transform: scaleX(-1);
+  height: 50px;
+  transform: scaleX(-1);
 }
 
 #nav-bar {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 #nav-bar a {
-    color: #e1f1f6;
-    text-decoration: none;
-    font-size: 1.25em;
-    font-weight: bold;
+  color: #e1f1f6;
+  text-decoration: none;
+  font-size: 1.25em;
+  font-weight: bold;
 }
 
 #nav-bar a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
 
 #side-pane {
-    background-color: #27394c;
-    padding: 10px;
-    grid-area: side;
-    border-radius: 15px;
-    text-align: center;
-    height: 150%;
+  background-color: #27394c;
+  padding: 10px;
+  grid-area: side;
+  border-radius: 20px;
+  text-align: center;
+  height: var(--pane-height-percent);
 }
 
-#side-pane h1, h2 {
-    margin-bottom: 0px;
+#side-pane h1,
+h2 {
+  margin-bottom: 0px;
 }
 
 .skills-list {
-    list-style-type: square;
-    text-align: left;
-    margin-top: 4px;
+  list-style-type: square;
+  text-align: left;
+  margin-top: 4px;
 }
 
-#interests-list > li::marker{
-    font-size: 1.25em;
-    font-weight: bold;
+#img-link {
+  display: inline-block;
+  margin: 5px;
+  width: 90%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 50% 25%;
+  border-radius: 20px;
+}
+
+#interests-list > li::marker {
+  font-size: 1.25em;
+  font-weight: bold;
 }
 
 #interests-list ul {
-    margin-left: 0;
-    padding: 5px;
-    padding-left: 1.1rem;
-    list-style-type: square;
+  margin-left: 0;
+  padding: 5px;
+  padding-left: 1.1rem;
+  list-style-type: square;
 }
 
 .bold-title {
-    font-weight: bold;
-    font-size: 1.25em;
+  font-weight: bold;
+  font-size: 1.25em;
 }
 
 .introduction {
-    margin-top: 5px;
-    line-height: 1.15;
+  margin-top: 5px;
+  line-height: 1.15;
 }
 
-
-/* Consider adding side or right pane hover effects */
-
 #right-pane {
-    background-color: #27394c;
-    padding: 10px 15px;
-    grid-area: right;
-    border-radius: 15px;
-    height: 150%;
+  background-color: #27394c;
+  padding: 10px 15px;
+  grid-area: right;
+  border-radius: 20px;
+  height: var(--pane-height-percent);
 }
 
 #right-pane h1 {
-    margin-top: 10px;        /* reset default top margin */
-    margin-bottom: 10px;
-    color: #49c5b1;
+  margin-top: 10px; /* reset default top margin */
+  margin-bottom: 10px;
+  color: #49c5b1;
 }
 
 /* TODO: update styles to only use one class instead of two since they share the same propertiess */
-.info-table{
-    border-collapse: collapse;
-    width: 100%;
+.info-table {
+  border-collapse: collapse;
+  width: 100%;
 }
 
-#info-table th{
-    padding: 8px;
+#info-table th {
+  padding: 8px;
 }
 
 #info-table ul {
-    list-style-type: square;
+  list-style-type: square;
 }
 
-#info-table tr:nth-child(odd){
-    background-color: rgb(29, 42, 56);
+#info-table tr:nth-child(odd) {
+  background-color: rgb(29, 42, 56);
 }
 
 .no-height {
-    display: none;
+  display: none;
 }
 
 .exp-format-left {
-    text-align: left;
+  text-align: left;
 }
 .exp-format-right {
-    text-align: right;
-    white-space: nowrap; /* prevent wrapping, force it to be on one line */
+  text-align: right;
+  white-space: nowrap; /* prevent wrapping, force it to be on one line */
 }
 
 .exp-location {
-    padding-top: 5px;
-    font-style: italic;
+  padding-top: 5px;
+  font-style: italic;
 }
 
-.exp-points ul{
-    margin: 4px 0 10px 0;
-    padding-left: 2rem;
+.exp-points ul {
+  margin: 4px 0 10px 0;
+  padding-left: 2rem;
 }
 
 #profile-pic {
-    width: 200px;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    border: 4px solid #e1f1f6;
-    overflow: hidden;
-    margin: 0 auto;
-    transition: filter 0.5s ease, border-color 0.5s ease;
-    cursor: pointer;
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 4px solid #e1f1f6;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: filter 0.5s ease, border-color 0.5s ease;
+  cursor: pointer;
 }
 
 #profile-pic:hover {
-    filter: brightness(0.85);
-    border-color: #49c5b1;
+  filter: brightness(0.85);
+  border-color: #49c5b1;
 }
 
 #profile-pic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.15);
-    transform-origin: center center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.15);
+  transform-origin: center center;
 }

@@ -14,7 +14,7 @@
 
     <div id="container">
         <div id="top-pane">    
-            <img src="images/hammer.webp" alt="Hammerhead shark" id="logo">
+            <!-- <img src="images/hammer.webp" alt="Hammerhead shark" id="logo"> -->
             <div id="nav-bar">
                 <a href="#career-header">Career</a>&nbsp;-
                 <a href="#education-header">Education</a>&nbsp;-
@@ -150,5 +150,19 @@
 
     </div>
 
+    <script>
+    // Tiny scroll listener: toggles 'scrolled' once past threshold
+    (function() {
+        const THRESHOLD = 40; // px scrolled before shrink
+        let lastState = false;
+        window.addEventListener('scroll', () => {
+            const should = window.scrollY > THRESHOLD;
+            if (should !== lastState) {
+                document.body.classList.toggle('scrolled', should);
+                lastState = should;
+            }
+        }, { passive: true });
+    })();
+    </script>
 </body>
 </html>

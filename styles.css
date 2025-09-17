@@ -45,6 +45,7 @@ hr {
     background-color: #27394c;
     padding: 10px;
     grid-area: top;
+    border:#49c5b1 2px solid;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -96,6 +97,8 @@ hr {
     height: 150%;
 }
 
+/* Consider adding side or right pane hover effects */
+
 #right-pane {
     background-color: #27394c;
     padding: 10px;
@@ -103,11 +106,6 @@ hr {
     border-radius: 15px;
     height: 150%;
 }
-/* 
-#side-pane,
-#right-pane {
-    overflow-y: auto;
-} */
 
 #right-pane h1 {
     margin-top: 10px;        /* reset default top margin */

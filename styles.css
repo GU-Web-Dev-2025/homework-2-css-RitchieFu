@@ -43,6 +43,7 @@ hr {
   gap: 10px;
   min-height: 100vh; /* can grow beyond viewport */
   max-width: 1100px;
+  padding-bottom: 500px;
   margin: 0 auto;
 }
 

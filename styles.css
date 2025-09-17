@@ -1,6 +1,26 @@
 
+/*
+ Ritchie Fu, CPSC 322, Homework 2, 9/16/2025
+*/
 body {
-    font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: American Typewriter, 'Courier New', monospace;
+    background-color: #030713;
+    color: #e1f1f6;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #49c5b1;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #030713;
+    margin: 10px 0;
+}
+
+#education-table {
+    width: 100%;
 }
 
 #container {
@@ -12,26 +32,30 @@ body {
     grid-template-rows: 20% auto;
     gap: 10px;
     height: 90vh;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 #top-pane {
-    background-color: lightblue;
+    background-color: #27394c;
     padding: 10px;
     grid-area: top;
 }
 
 #side-pane {
-    background-color: lightgreen;
+    background-color: #27394c;
     padding: 10px;
     grid-area: side;
 }
 
 #right-pane {
-    background-color: rgb(210, 210, 210);
+    background-color: #27394c;
     padding: 5px 25px;
     grid-area: right;
+}
+
+#right-pane h1 {
+    margin-top: 10px;        /* reset default top margin */
 }
 
 .exp-format-left {
@@ -49,4 +73,28 @@ body {
 .exp-points ul{
     margin: 4px 0 10px 0;
     padding-left: 2rem;
+}
+
+#profile-pic {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 6px solid white;
+    overflow: hidden;
+    margin: 0 auto;
+    transition: filter 0.5s ease, border-color 0.5s ease;
+    cursor: pointer;
+}
+
+#profile-pic:hover {
+    filter: brightness(0.85);
+    border-color: #49c5b1;
+}
+
+#profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.15);
+    transform-origin: center center;
 }

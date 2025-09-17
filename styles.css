@@ -24,11 +24,6 @@ hr {
     margin: 10px 0;
 }
 
-
-#education-table {
-    width: 100%;
-}
-
 #container {
     display: grid;
     grid-template-areas: 
@@ -115,8 +110,31 @@ body.scrolled #top-pane {
     height: 150%;
 }
 
-#side-pane h1 {
+#side-pane h1, h2 {
     margin-bottom: 0px;
+}
+
+.skills-list {
+    list-style-type: square;
+    text-align: left;
+    margin-top: 4px;
+}
+
+#interests-list > li::marker{
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+#interests-list ul {
+    margin-left: 0;
+    padding: 5px;
+    padding-left: 1.1rem;
+    list-style-type: square;
+}
+
+.bold-title {
+    font-weight: bold;
+    font-size: 1.25em;
 }
 
 .introduction {
@@ -124,11 +142,12 @@ body.scrolled #top-pane {
     line-height: 1.15;
 }
 
+
 /* Consider adding side or right pane hover effects */
 
 #right-pane {
     background-color: #27394c;
-    padding: 10px;
+    padding: 10px 15px;
     grid-area: right;
     border-radius: 15px;
     height: 150%;
@@ -141,20 +160,25 @@ body.scrolled #top-pane {
 }
 
 /* TODO: update styles to only use one class instead of two since they share the same propertiess */
-#career-table, #education-table {
+.info-table{
     border-collapse: collapse;
+    width: 100%;
 }
 
-#career-table th, #education-table th{
+#info-table th{
     padding: 8px;
 }
 
-#career-table ul, #education-table ul {
+#info-table ul {
     list-style-type: square;
 }
 
-#career-table tr:nth-child(odd), #education-table tr:nth-child(odd) {
+#info-table tr:nth-child(odd){
     background-color: rgb(29, 42, 56);
+}
+
+.no-height {
+    display: none;
 }
 
 .exp-format-left {
@@ -166,6 +190,7 @@ body.scrolled #top-pane {
 }
 
 .exp-location {
+    padding-top: 5px;
     font-style: italic;
 }
 

@@ -41,13 +41,17 @@
             <hr>
 
             <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Languages: Python, Java, HTML/CSS/JS</li>
+                <li>Tools: Google Colab, PyTorch, matplotlib, Google Cloud Run, Firebase, FastAPI, Pinecone</li>
+            </ul>
         </section>
 
         <section id="right-pane">
             <h1 id="career-header">Career Summary</h1>
             <hr> <!-- horizontal line -->
             <section>
-                <table id="career-table">
+                <table class="info-table">
                     <tr>
                         <th class="exp-format-left">Agricultural Data Science Research Intern</th>
                         <td class="exp-format-right">June 2025 - August 2025&nbsp;</td>
@@ -55,7 +59,7 @@
                     <tr>
                         <td class="exp-location" colspan="2">Phenomics Lab - Washington State University,&nbsp;Pullman,&nbsp;WA</td>
                     </tr>
-                    <tr></tr> <!-- spacer row -->
+                    <tr class="no-height"><td colspan="2"></td></tr> <!-- spacer row -->
                     <tr class="exp-points">
                         <td colspan="2">
                             <ul>
@@ -67,8 +71,8 @@
                             </ul>
                         </td>
                     </tr>
-                    <tr></tr> <!-- spacer row -->
-                    <tr></tr> <!-- spacer row -->
+                    <tr class="no-height"><td colspan="2"></td></tr> <!-- spacer row -->
+                    <tr class="no-height"><td colspan="2"></td></tr> <!-- spacer row -->
                     <tr>
                         <th class="exp-format-left">On-Campus Coding Instructor</th>
                         <td class="exp-format-right">June 2024 - August 2024&nbsp;</td>
@@ -76,7 +80,7 @@
                     <tr>
                         <td class="exp-location" colspan="2">iD Tech Camps @ Lewis and Clark College, Portland, OR</td>
                     </tr>
-                    <tr></tr> <!-- spacer row -->
+                    <tr class="no-height"><td colspan="2"></td></tr> <!-- spacer row -->
                     <tr class="exp-points">
                         <td colspan="2">
                             <ul>
@@ -93,7 +97,7 @@
             <h1 id="education-header">Education and Qualifications</h1>
             <hr>
             <section>
-                <table id="education-table">
+                <table class="info-table">
                     <tr>
                         <th class="exp-format-left">Gonzaga University, Spokane, WA</th>
                         <td class="exp-format-right">August 2022 - May 2026&nbsp;</td>
@@ -101,7 +105,7 @@
                     <tr>
                         <td class="exp-location" colspan="2">B.S. Computer Science, Concentration in Data Science</td>
                     </tr>
-                    <tr></tr> <!-- spacer row -->
+                    <tr class="no-height"><td colspan="2"></td></tr> <!-- spacer row -->
                     <tr class="exp-points">
                         <td colspan="2">
                             <ul>
@@ -119,26 +123,25 @@
             <h1 id="interests-header">Interests</h1>
             <hr>
             <section id="interests-content">
-                <ol>
+                <ol id="interests-list">
                     <li>
-                        <strong>Piano</strong>
+                        <span class="bold-title">Piano</span>
                         <ul>
                             <li>Started learning piano at age 6.</li>
                             <li>Accompanied a local elementary school's Missoula Children's Theater musicals!</li>
                             <li>Have played with the Gonzaga Wind Symphony and Wind Ensemble.</li>
                             <li>Performed the Grieg Piano Concerto, 1st movement, with the Gonzaga Symphony Orchestra in December 2023.</li>
                         </ul>
-                        <a href="https://www.youtube.com/watch?v=pX2FX0PapTc" target="_blank" rel="noopener noreferrer">YOUTUBE LINK</a>
                     </li>
                     <li>
-                        <strong>Skiing</strong>
+                        <span class="bold-title">Skiing</span>
                         <ul>
-                            <li>I've skiied at Mt. Hood (Meadows &amp; Skibowl) and Schweitzer for the past few years</li>
+                            <li>I've skiied at Mt. Hood (Meadows &amp; Skibowl) and Schweitzer for the past few years.</li>
                             <li>Looking to explore more of the mountains around Spokane and Idaho this year!</li>
                         </ul>
                     </li>
                     <li>
-                        <strong>Traveling</strong>
+                        <span class="bold-title">Traveling</span>
                         <ul>
                             <li>One of my favorite places I went to last year was Yosemite!</li>
                             <li>I saw El Capitan, Half Dome, and lots of waterfalls.</li>
@@ -147,7 +150,7 @@
                 </ol>
             </section>
         </section>
-    </section>
+    </div>
 
     <script>
     // Tiny scroll listener: toggles 'scrolled' once past threshold

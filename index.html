@@ -14,11 +14,11 @@
     <div id="container">
         <section id="top-pane">    
             <img src="images/hammer.webp" alt="Hammerhead shark" id="logo">
-            <div id="nav-bar">
+            <nav id="nav-bar">
                 <a href="#career-header">Career</a>&nbsp;-
                 <a href="#education-header">Education</a>&nbsp;-
                 <a href="#interests-header">Interests</a>
-            </div>
+            </nav>
             <img src="images/hammer.webp" alt="Hammerhead shark" id="logo-flipped">
         </section>
 
@@ -29,29 +29,33 @@
                 </a>
             </div>
             <h1><strong>Ritchie Fu</strong></h1>
+            <p>B.S. in Computer Science, Gonzaga University</p>
             <hr>
-            <p>
-                I am currently a senior at Gonzaga University, pursuing a B.S. in Computer Science,
+            <p class="introduction">
+                I am a senior at Gonzaga University, pursuing a B.S. in Computer Science,
                 with a concentration in Data Science. This past summer, I was a research intern at
                 Washington State University, where I developed neural network models to solve a 
-                phased array beamforming problem. I work with Google Colab, PyTorch, and matplotlib
+                phased array beamforming problem. I worked with Google Colab, PyTorch, and matplotlib
                 and designed a research poster to present my work at the WSU Symposium in August 2025.
             </p>
             <hr>
+
+            <h2>Skills</h2>
         </section>
 
         <section id="right-pane">
             <h1 id="career-header">Career Summary</h1>
             <hr> <!-- horizontal line -->
             <section>
-                <table>
+                <table id="career-table">
                     <tr>
                         <th class="exp-format-left">Agricultural Data Science Research Intern</th>
-                        <td class="exp-format-right">June 2025 - August 2025</td>
+                        <td class="exp-format-right">June 2025 - August 2025&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="exp-location" colspan="2">Phenomics Lab - Washington State University,&nbsp;Pullman,&nbsp;WA</td>
                     </tr>
+                    <tr></tr> <!-- spacer row -->
                     <tr class="exp-points">
                         <td colspan="2">
                             <ul>
@@ -63,13 +67,16 @@
                             </ul>
                         </td>
                     </tr>
+                    <tr></tr> <!-- spacer row -->
+                    <tr></tr> <!-- spacer row -->
                     <tr>
                         <th class="exp-format-left">On-Campus Coding Instructor</th>
-                        <td class="exp-format-right">June 2024 - August 2024</td>
+                        <td class="exp-format-right">June 2024 - August 2024&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="exp-location" colspan="2">iD Tech Camps @ Lewis and Clark College, Portland, OR</td>
                     </tr>
+                    <tr></tr> <!-- spacer row -->
                     <tr class="exp-points">
                         <td colspan="2">
                             <ul>
@@ -86,14 +93,15 @@
             <h1 id="education-header">Education and Qualifications</h1>
             <hr>
             <section>
-                <table>
+                <table id="education-table">
                     <tr>
                         <th class="exp-format-left">Gonzaga University, Spokane, WA</th>
-                        <td class="exp-format-right">August 2022 - May 2026</td>
+                        <td class="exp-format-right">August 2022 - May 2026&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="exp-location" colspan="2">B.S. Computer Science, Concentration in Data Science</td>
                     </tr>
+                    <tr></tr> <!-- spacer row -->
                     <tr class="exp-points">
                         <td colspan="2">
                             <ul>
@@ -144,7 +152,7 @@
     <script>
     // Tiny scroll listener: toggles 'scrolled' once past threshold
     (function() {
-        const THRESHOLD = 40; // px scrolled before shrink
+        const THRESHOLD = 35; // px scrolled before shrink
         let lastState = false;
         window.addEventListener('scroll', () => {
             const should = window.scrollY > THRESHOLD;

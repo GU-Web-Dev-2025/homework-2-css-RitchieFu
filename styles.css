@@ -2,7 +2,7 @@
  Ritchie Fu, CPSC 322, Homework 2, 9/16/2025
 */
 body {
-    font-family: American Typewriter, 'Courier New', monospace;
+    font-family: American Typerwriter, 'Courier', 'Courier New', monospace;
     background-color: #030713;
     color: #e1f1f6;
 }
@@ -11,7 +11,7 @@ html, body { margin: 0; padding: 0; }
 *, *::before, *::after { box-sizing: border-box; }
 
 :root {
-    --sticky-header-offset: 85px;
+    --sticky-header-offset: 80px;
 }
 
 html {
@@ -29,7 +29,6 @@ hr {
     width: 100%;
 }
 
-/* ...existing code... */
 #container {
     display: grid;
     grid-template-areas: 
@@ -42,7 +41,7 @@ hr {
     max-width: 1100px;
     margin: 0 auto;
 }
-/* ...existing code... */
+
 #top-pane {
     background-color: rgba(39,57,76,0.55); /* frosted translucency */
     backdrop-filter: blur(8px);
@@ -116,6 +115,15 @@ body.scrolled #top-pane {
     height: 150%;
 }
 
+#side-pane h1 {
+    margin-bottom: 0px;
+}
+
+.introduction {
+    margin-top: 5px;
+    line-height: 1.15;
+}
+
 /* Consider adding side or right pane hover effects */
 
 #right-pane {
@@ -130,6 +138,23 @@ body.scrolled #top-pane {
     margin-top: 10px;        /* reset default top margin */
     margin-bottom: 10px;
     color: #49c5b1;
+}
+
+/* TODO: update styles to only use one class instead of two since they share the same propertiess */
+#career-table, #education-table {
+    border-collapse: collapse;
+}
+
+#career-table th, #education-table th{
+    padding: 8px;
+}
+
+#career-table ul, #education-table ul {
+    list-style-type: square;
+}
+
+#career-table tr:nth-child(odd), #education-table tr:nth-child(odd) {
+    background-color: rgb(29, 42, 56);
 }
 
 .exp-format-left {

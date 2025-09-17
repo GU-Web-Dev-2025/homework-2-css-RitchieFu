@@ -1,153 +1,265 @@
 <!DOCTYPE html>
 <!-- 
- Ritchie Fu, CPSC 322, Homework 2, 9/16/2025
+ Ritchie Fu, CPSC 322, Homework 2, 9/17/2025
 -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ritchie's CV</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div id="container">
-        <div id="top-pane">    
-            <!-- <img src="images/hammer.webp" alt="Hammerhead shark" id="logo"> -->
-            <div id="nav-bar">
-                <a href="#career-header">Career</a>&nbsp;-
-                <a href="#education-header">Education</a>&nbsp;-
-                <a href="#interests-header">Interests</a>
-            </div>
+      <section id="top-pane">
+        <img src="images/hammer.webp" alt="Hammerhead shark" id="logo" />
+        <nav id="nav-bar">
+          <a href="#career-header">Career</a>&nbsp;-
+          <a href="#education-header">Education</a>&nbsp;-
+          <a href="#interests-header">Interests</a>
+        </nav>
+        <img
+          src="images/hammer.webp"
+          alt="Hammerhead shark"
+          id="logo-flipped"
+        />
+      </section>
+
+      <section id="side-pane">
+        <div id="profile-pic">
+          <a
+            href="https://www.linkedin.com/in/ritchie-fu-4a2273242/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="images/profile.jpg" alt="Profile Picture" />
+          </a>
         </div>
+        <h1><strong>Ritchie Fu</strong></h1>
+        <p>B.S. in Computer Science, Gonzaga University</p>
+        <hr />
+        <p class="introduction">
+          I am a senior at Gonzaga University, pursuing a B.S. in Computer
+          Science, with a concentration in Data Science. This past summer, I was
+          a research intern at Washington State University, where I developed
+          neural network models to solve a phased array beamforming problem. I
+          worked with Google Colab, PyTorch, and matplotlib and designed a
+          research poster to present my work at the WSU Symposium in August
+          2025.
+        </p>
+        <hr />
 
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>Languages: Python, Java, HTML/CSS/JS</li>
+          <li>
+            Tools: Google Colab, PyTorch, matplotlib, Google Cloud Run,
+            Firebase, FastAPI, Pinecone
+          </li>
+        </ul>
+        <hr />
+        <a
+          href="https://www.youtube.com/watch?v=pX2FX0PapTc"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="images/dr_h.jpeg"
+            alt="Me and Dr. Hekmatpanah"
+            id="img-link"
+          />
+        </a>
+      </section>
 
-        <div id="side-pane">
-            <div id="profile-pic">
-                <a href="https://www.linkedin.com/in/ritchie-fu-4a2273242/" target="_blank" rel="noopener noreferrer">
-                    <img src="images/profile.jpg" alt="Profile Picture">
-                </a>
-            </div>
-            <h1><strong>Ritchie Fu</strong></h1>
-            <hr>
-            <p>
-                I am currently a senior at Gonzaga University, pursuing a B.S. in Computer Science,
-                with a concentration in Data Science. This past summer, I was a research intern at
-                Washington State University, where I developed neural network models to solve a 
-                phased array beamforming problem. I work with Google Colab, PyTorch, and matplotlib
-                and designed a research poster to present my work at the WSU Symposium in August 2025.
-            </p>
-            <hr>
+      <section id="right-pane">
+        <h1 id="career-header">Career Summary</h1>
+        <hr />
+        <!-- horizontal line -->
+        <section>
+          <table class="info-table">
+            <tr>
+              <th class="exp-format-left">
+                Agricultural Data Science Research Intern
+              </th>
+              <td class="exp-format-right">June 2025 - August 2025&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="exp-location" colspan="2">
+                Phenomics Lab - Washington State
+                University,&nbsp;Pullman,&nbsp;WA
+              </td>
+            </tr>
+            <tr class="no-height">
+              <td colspan="2"></td>
+            </tr>
+            <!-- spacer row -->
+            <tr class="exp-points">
+              <td colspan="2">
+                <ul>
+                  <li>
+                    Developed deep learning models in PyTorch to predict phase
+                    coefficients for phased array calibration
+                  </li>
+                  <li>
+                    Designed a data pipeline modeling nonlinear phase
+                    distortions for training and evaluation
+                  </li>
+                  <li>
+                    Built a Python/matplotlib GUI to visualize power patterns
+                    and phase shifts under different beam angles and
+                    nonlinearities
+                  </li>
+                  <li>Benchmarked and recorded model performance</li>
+                  <li>
+                    Presented findings at the WSU Summer Research Symposium 2025
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="no-height">
+              <td colspan="2"></td>
+            </tr>
+            <!-- spacer row -->
+            <tr class="no-height">
+              <td colspan="2"></td>
+            </tr>
+            <!-- spacer row -->
+            <tr>
+              <th class="exp-format-left">On-Campus Coding Instructor</th>
+              <td class="exp-format-right">June 2024 - August 2024&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="exp-location" colspan="2">
+                iD Tech Camps @ Lewis and Clark College, Portland, OR
+              </td>
+            </tr>
+            <tr class="no-height">
+              <td colspan="2"></td>
+            </tr>
+            <!-- spacer row -->
+            <tr class="exp-points">
+              <td colspan="2">
+                <ul>
+                  <li>
+                    Conducted week-long courses in Java and Python, teaching up
+                    to 12 students per week
+                  </li>
+                  <li>
+                    Educated students on how to use OpenAI API tools such as
+                    Completions,&nbsp;Assistants,&nbsp;and Whisper
+                  </li>
+                  <li>
+                    Improved students' understanding of machine learning by
+                    building an image detection model
+                  </li>
+                  <li>
+                    Aided students in fixing bugs and implementing creative
+                    ideas for projects in their portfolio
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </section>
 
-
-        </div>
-        <div id="right-pane">
-            <h1 id="career-header">Career Summary</h1>
-            <hr> <!-- horizontal line -->
-            <section>
-                <table>
-                    <tr>
-                        <th class="exp-format-left">Agricultural Data Science Research Intern</th>
-                        <td class="exp-format-right">June 2025 - August 2025</td>
-                    </tr>
-                    <tr>
-                        <td class="exp-location" colspan="2">Phenomics Lab - Washington State University,&nbsp;Pullman,&nbsp;WA</td>
-                    </tr>
-                    <tr class="exp-points">
-                        <td colspan="2">
-                            <ul>
-                                <li>Developed deep learning models in PyTorch to predict phase coefficients for phased array calibration</li>
-                                <li>Designed a data pipeline modeling nonlinear phase distortions for training and evaluation</li>
-                                <li>Built a Python/matplotlib GUI to visualize power patterns and phase shifts under different beam angles and nonlinearities</li>
-                                <li>Benchmarked and recorded model performance</li>
-                                <li>Presented findings at the WSU Summer Research Symposium 2025</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="exp-format-left">On-Campus Coding Instructor</th>
-                        <td class="exp-format-right">June 2024 - August 2024</td>
-                    </tr>
-                    <tr>
-                        <td class="exp-location" colspan="2">iD Tech Camps @ Lewis and Clark College, Portland, OR</td>
-                    </tr>
-                    <tr class="exp-points">
-                        <td colspan="2">
-                            <ul>
-                                <li>Conducted week-long courses in Java and Python, teaching up to 12 students per week</li>
-                                <li>Educated students on how to use OpenAI API tools such as Completions,&nbsp;Assistants,&nbsp;and Whisper</li>
-                                <li>Improved students' understanding of machine learning by building an image detection model</li>
-                                <li>Aided students in fixing bugs and implementing creative ideas for projects in their portfolio</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-            </section>
-
-            <h1 id="education-header">Education and Qualifications</h1>
-            <hr>
-            <section>
-                <table>
-                    <!-- <caption>Education History from high school to university.</caption> -->
-                    <tr>
-                        <th class="exp-format-left">Gonzaga University, Spokane, WA</th>
-                        <td class="exp-format-right">August 2022 - May 2026</td>
-                    </tr>
-                    <tr>
-                        <td class="exp-location" colspan="2">B.S. Computer Science, Concentration in Data Science</td>
-                    </tr>
-                    <tr class="exp-points">
-                        <td colspan="2">
-                            <ul>
-                                <li>
-                                    <strong>Relevant Coursework:</strong>&nbsp;
-                                    Web Development, Machine Learning, Data Science Algorithms, 
-                                    Computer Security, Database Management Systems, Design and Analysis of Computer Algorithms, 
-                                    Data Science Project Lab, Computer Organization
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-            </section>
-            <h1 id="interests-header">Interests</h1>
-            <hr>
-            <section id="interests-content">
-                <ol>
-                    <li>
-                        <strong>Piano</strong>
-                        <ul>
-                            <li>Started learning piano at age 6.</li>
-                            <li>Accompanied a local elementary school's Missoula Children's Theater musicals!</li>
-                            <li>Have played with the Gonzaga Wind Symphony and Wind Ensemble.</li>
-                            <li>Performed the Grieg Piano Concerto, 1st movement, with the Gonzaga Symphony Orchestra in December 2023.</li>
-                        </ul>
-                        <a href="https://www.youtube.com/watch?v=pX2FX0PapTc" target="_blank" rel="noopener noreferrer">YOUTUBE LINK</a>
-                    </li>
-                    <li>
-                        <strong>Skiing</strong>
-                        <ul>
-                            <li>I've skiied at Mt. Hood (Meadows &amp; Skibowl) and Schweitzer for the past few years</li>
-                            <li>Looking to explore more of the mountains around Spokane and Idaho this year!</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Traveling</strong>
-                        <ul>
-                            <li>One of my favorite places I went to last year was Yosemite!</li>
-                            <li>I saw El Capitan, Half Dome, and lots of waterfalls.</li>
-                        </ul>
-                    </li>
-                </ol>
-                <!-- <div id="photo-row">
-                    <img src="images/dr_h.jpeg" alt="A picture of myself with Dr. H!"/>
-                    <img src="images/divide.jpeg" alt="A picture of myself skiing at Schweitzer"/>
-                    <img src="images/yos3.jpeg" alt="A picture of myself at Yosemite"/>
-                </div> -->
-            </section>
-        </div>
-
+        <h1 id="education-header">Education and Qualifications</h1>
+        <hr />
+        <section>
+          <table class="info-table">
+            <tr>
+              <th class="exp-format-left">Gonzaga University, Spokane, WA</th>
+              <td class="exp-format-right">August 2022 - May 2026&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="exp-location" colspan="2">
+                B.S. Computer Science, Concentration in Data Science
+              </td>
+            </tr>
+            <tr class="no-height">
+              <td colspan="2"></td>
+            </tr>
+            <!-- spacer row -->
+            <tr class="exp-points">
+              <td colspan="2">
+                <ul>
+                  <li>
+                    <strong>Relevant Coursework:</strong>&nbsp; Web Development,
+                    Machine Learning, Data Science Algorithms, Computer
+                    Security, Database Management Systems, Design and Analysis
+                    of Computer Algorithms, Data Science Project Lab, Computer
+                    Organization
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </section>
+        <h1 id="interests-header">Interests</h1>
+        <hr />
+        <section id="interests-content">
+          <ol id="interests-list">
+            <li>
+              <span class="bold-title">Piano</span>
+              <ul>
+                <li>Started learning piano at age 6.</li>
+                <li>
+                  Accompanied a local elementary school's Missoula Children's
+                  Theater musicals!
+                </li>
+                <li>
+                  Have played with the Gonzaga Wind Symphony and Wind Ensemble.
+                </li>
+                <li>
+                  Performed the Grieg Piano Concerto, 1st movement, with the
+                  Gonzaga Symphony Orchestra in December 2023.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span class="bold-title">Skiing</span>
+              <ul>
+                <li>
+                  I've skiied at Mt. Hood (Meadows &amp; Skibowl) and Schweitzer
+                  for the past few years.
+                </li>
+                <li>
+                  Looking to explore more of the mountains around Spokane and
+                  Idaho this year!
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span class="bold-title">Traveling</span>
+              <ul>
+                <li>
+                  One of my favorite places I went to last year was Yosemite!
+                </li>
+                <li>I saw El Capitan, Half Dome, and lots of waterfalls.</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+      </section>
     </div>
-</body>
+
+    <script>
+      // Tiny scroll listener: toggles 'scrolled' once past threshold
+      (function () {
+        const THRESHOLD = 35; // px scrolled before shrink
+        let lastState = false;
+        window.addEventListener(
+          "scroll",
+          () => {
+            const should = window.scrollY > THRESHOLD;
+            if (should !== lastState) {
+              document.body.classList.toggle("scrolled", should);
+              lastState = should;
+            }
+          },
+          { passive: true }
+        );
+      })();
+    </script>
+  </body>
 </html>

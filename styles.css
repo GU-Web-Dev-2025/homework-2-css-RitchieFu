@@ -160,6 +160,8 @@ h2 {
 }
 
 .introduction {
+  text-indent: 2.5em;
+  padding-left: 10px;
   margin-top: 5px;
   line-height: 1.15;
 }
@@ -184,15 +186,15 @@ h2 {
   width: 100%;
 }
 
-#info-table th {
-  padding: 8px;
+.info-table th {
+  padding: 5px;
 }
 
-#info-table ul {
+.info-table ul {
   list-style-type: square;
 }
 
-#info-table tr:nth-child(odd) {
+.info-table tr:nth-child(odd) {
   background-color: rgb(29, 42, 56);
 }
 

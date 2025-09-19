@@ -27,9 +27,9 @@ html {
   scroll-padding-top: var(--sticky-header-offset);
 }
 #name-hr {
-    border-top: 2px solid #e1f1f6;
-    width: 85%;
-    margin: 10px auto;
+  border-top: 2px solid #e1f1f6;
+  width: 85%;
+  margin: 10px auto;
 }
 hr {
   border: none;
@@ -197,8 +197,6 @@ h2 {
   border-collapse: collapse;
   width: 100%;
 }
-
-
 
 .info-table th {
   padding: 5px;

@@ -1,5 +1,5 @@
 /*
- Ritchie Fu, CPSC 322, Homework 2, 9/17/2025
+ Ritchie Fu, CPSC 322, Homework 2, 9/18/2025
 */
 body {
   font-family: American Typerwriter, "Courier", "Courier New", monospace;
@@ -26,7 +26,11 @@ body {
 html {
   scroll-padding-top: var(--sticky-header-offset);
 }
-
+#name-hr {
+    border-top: 2px solid #e1f1f6;
+    width: 85%;
+    margin: 10px auto;
+}
 hr {
   border: none;
   border-top: 2px solid #030713;
@@ -133,13 +137,21 @@ h2 {
 }
 
 #img-link {
-  display: inline-block;
-  margin: 5px;
-  width: 90%;
+  display: block;
+  border: 2px solid #e1f1f6;
+  margin: 5px auto;
+  width: 50%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: 50% 25%;
   border-radius: 20px;
+  transition: filter 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+#img-link:hover {
+  filter: brightness(0.85);
+  transform: scale(1.025);
+  border-color: #49c5b1;
 }
 
 #interests-list > li::marker {
@@ -186,6 +198,8 @@ h2 {
   width: 100%;
 }
 
+
+
 .info-table th {
   padding: 5px;
 }
@@ -229,12 +243,13 @@ h2 {
   border: 4px solid #e1f1f6;
   overflow: hidden;
   margin: 0 auto;
-  transition: filter 0.5s ease, border-color 0.5s ease;
+  transition: filter 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
 
 #profile-pic:hover {
   filter: brightness(0.85);
+  transform: scale(1.025);
   border-color: #49c5b1;
 }
 
